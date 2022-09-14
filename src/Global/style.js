@@ -25,10 +25,10 @@ export const GlobalStyle = createGlobalStyle`
     }
     li{
       font-size: 1.5rem;
-      text-decoration: none;
+      list-style: none;
     }
     Link{
-      text-decoration: none;
+      
     }
     `
 

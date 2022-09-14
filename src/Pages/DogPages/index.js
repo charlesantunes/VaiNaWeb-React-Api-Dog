@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from 'axios'
 
 import { Menu, Container } from "../../Global/style";
-import { BoxDog, BoxCard, Botao } from "./style";
+import * as S from "./style";
 
 
 
@@ -42,27 +42,26 @@ function getDog(){
             <li><Link to="/dogpage"><p>Dog Page</p></Link></li>
           </ul>
         </Menu> 
-      <Botao>
-            <button onClick={() =>{getDog()}}><span>Next</span></button>   
-
-      </Botao>
-      <BoxCard>        
-        <BoxDog>
+      <S.Botao>
+          <button onClick={() =>{getDog()}}><span>Next</span></button> 
+      </S.Botao>
+      <S.BoxCard>        
+        <S.BoxDog>
           <h1>Dog one</h1>
           <h2>Clique em next para ver o DOG 1</h2>
           {status && <img src={dog1} alt='Foto de doguinho' />}
-          </BoxDog>
-        <BoxDog>
+        </S.BoxDog>
+        <S.BoxDog>
           <h1>Dog two</h1>
           <h2>Clique em next para ver o DOG 2</h2>
           {status && <img src={dog2} alt='Foto de doguinho' />}
-        </BoxDog>
-        <BoxDog>
+        </S.BoxDog>
+        <S.BoxDog>
           <h1>Dog three</h1>
           <h2>Clique em next para ver o DOG 2</h2>
            {status && <img src={dog3} alt='Foto de doguinho' />}
-        </BoxDog>
-      </BoxCard>
+        </S.BoxDog>
+      </S.BoxCard>
     </Container>
   );
 }
